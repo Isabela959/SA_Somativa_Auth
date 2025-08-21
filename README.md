@@ -2,19 +2,19 @@
 DOCUMENTAÇÃO DO PROJETO RH:
 
 DIAGRAMA DE CLASSES DE USO:  
-_Isabela Ramos_
+
 ![Diagrama de classes de uso](assets/diagrama.png)
 
 FLUXOGRAMA:  
-_Enzo Paralupi_
+
 ![Fluxograma](assets/fluxograma.png)
 
 DIAGRAMA DE CLASSES:  
-_Kauan Sabino_
+
 ![Diagrama de classes](assets/classesdeuso.png)
 
 CRONOGRAMA:  
-_Kauã Santos_
+
 ![Cronograma](assets/cronograma.png)
 
 1.ESCOPO: 
