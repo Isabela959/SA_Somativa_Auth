@@ -19,11 +19,17 @@ DOCUMENTAÇÃO DO PROJETO RH:
 <em style="font-size:12px;">Kauã Santos</em></p>
 <img src="assets/cronograma.png" width="500"/>
 
+FIGMA: 
+
+<p><strong>:</strong><br>
+<em style="font-size:12px;">Isabela Ramos</em></p>
+<img src="assets/diagrama.png" width="500"/>
+
 <small>
 
 1.ESCOPO:  
 1. Objetivo do Projeto RH  
-O objetivo do projeto RH é desenvolver uma aplicação web de RH que permita um tipo de interação entre os usuários comuns e administradores. A plataforma criada oferecerá funcionalidades como cadastro e login de usuários, criação e visualização de currículos, bem como a gestão de vagas por parte do administrador do projeto.  
+O objetivo do projeto RH é desenvolver uma aplicação web de RH que permita um tipo de interação entre os usuários comuns e administradores. A plataforma criada oferecerá as funcionalidades como cadastro e login de usuários, criação e visualização de currículos, bem como a gestão de vagas por parte do administrador do projeto no final.  
 2. Perfis de Usuário  
 2.1- Usuário Comum:  
 -Pode criar uma conta na plataforma.  
@@ -41,7 +47,9 @@ O usuário poderá criar uma conta informando nome completo, e-mail e senha.
 Login:  
 O acesso será feito via e-mail e senha cadastrados pelo usuário.  
 Cadastro e Edição de Currículo:  
-O usuário poderá preencher e manter atualizado um currículo contendo:  
+O usuário poderá preencher e manter atualizado um currículo contendo 
+
+:  
 -Nome completo  
 -E-mail  
 -Telefone  
