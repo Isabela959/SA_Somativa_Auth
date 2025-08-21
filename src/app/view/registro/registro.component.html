@@ -1,0 +1,15 @@
+<h2>Cadastro</h2>
+<form (ngSubmit)="registrar()">
+  <label>Nome:</label>
+  <input type="text" [(ngModel)]="nome" name="nome" required>
+
+  <label>Email:</label>
+  <input type="email" [(ngModel)]="email" name="email" required>
+
+  <label>Senha:</label>
+  <input type="password" [(ngModel)]="senha" name="senha" required>
+
+  <button type="submit">Cadastrar</button>
+</form>
+
+<p>Já tem conta? <a routerLink="/login">Faça login</a></p>

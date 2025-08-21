@@ -3,7 +3,12 @@
   <p>Aqui você pode cadastrar seu currículo e procurar por vagas de emprego</p>
 
   <div class="button-container">
-    <a href="/cadastrar-curriculo" class="buttonLink">Cadastrar Currículo</a>
-  </div>
+    <!-- Só aparece se estiver logado -->
+    <a *ngIf="authService.estaAutenticado()" routerLink="/cadastrar-curriculo" class="buttonLink">
+      Cadastrar Currículo
+    </a>
 
+    <!-- Se não estiver logado, sugere login -->
+    <p *ngIf="!authService.estaAutenticado()">Faça login para acessar currículos e vagas</p>
+  </div>
 </div>
