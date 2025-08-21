@@ -3,10 +3,13 @@ DOCUMENTAÇÃO DO PROJETO RH:
 
 DIAGRAMA DE CLASSES DE USO:
 ![Diagrama de classes de uso](assets/diagrama.png)
+
 FLUXOGRAMA:
 ![Fluxograma](assets/fluxograma.png)
+
 DIAGRAMA DE CLASSES:
-![Diagrama de classes](assets/ClassesDeUso.png)
+![Diagrama de classes](assets/classesdeuso.png)
+
 CRONOGRAMA:
 ![Cronograma](assets/cronograma.png)
 
