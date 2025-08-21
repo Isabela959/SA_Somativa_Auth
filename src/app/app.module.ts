@@ -9,9 +9,12 @@ import { FooterComponent } from './template/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { PainelVagasComponent } from './view/painel-vagas/painel-vagas.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CurriculoFormComponent } from './view/curriculo-form/curriculo-form.component';
 import { CurriculoListComponent } from './view/curriculo-list/curriculo-list.component';
+import { LoginComponent } from './view/login/login.component';
+import { RegistroComponent } from './view/registro/registro.component';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +25,16 @@ import { CurriculoListComponent } from './view/curriculo-list/curriculo-list.com
     FooterComponent,
     PainelVagasComponent,
     CurriculoFormComponent,
-    CurriculoListComponent
+    CurriculoListComponent,
+    LoginComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    ReactiveFormsModule, 
     FormsModule
   ],
   providers: [],
