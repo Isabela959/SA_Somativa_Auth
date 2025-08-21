@@ -25,17 +25,17 @@ DOCUMENTAÇÃO DO PROJETO RH:
 1. Objetivo do Projeto RH  
 O objetivo do projeto RH é desenvolver uma aplicação web de RH que permita um tipo de interação entre os usuários comuns e administradores. A plataforma criada oferecerá funcionalidades como cadastro e login de usuários, criação e visualização de currículos, bem como a gestão de vagas por parte do administrador do projeto.  
 2. Perfis de Usuário  
-- Usuário Comum:  
+2.1- Usuário Comum:  
 -Pode criar uma conta na plataforma.  
 -Pode realizar login utilizando e-mail e senha.  
 -Pode cadastrar, editar e visualizar seu próprio currículo.  
 -Pode visualizar todas as vagas disponíveis na plataforma, cadastradas pelo administrador.  
-- Administrador (RH):  
+2.2- Administrador (RH):  
 -Possui acesso restrito através de login.  
 -Pode cadastrar, editar e excluir vagas de empregos dos usuários comuns.  
 -Pode visualizar todos os currículos cadastrados pelos usuários comuns.  
 3. Funcionalidades Requeridas do Projeto  
-- Funcionalidades do Usuário Comum  
+3.1- Funcionalidades do Usuário Comum  
 Cadastro de Conta:  
 O usuário poderá criar uma conta informando nome completo, e-mail e senha.  
 Login:  
@@ -56,7 +56,7 @@ O usuário poderá visualizar a listagem de todas as vagas ativas da plataforma,
 -Foto  
 -Descrição da Vaga  
 -Salário  
-- Funcionalidades do Administrador  
+3.2- Funcionalidades do Administrador  
 Login:  
 O administrador acessará a área de gestão por meio de login com credenciais específicas.  
 Cadastro de Vagas:  
