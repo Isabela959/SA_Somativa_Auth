@@ -1,8 +1,8 @@
 # SA_Somativa_Auth
 DOCUMENTAÇÃO DO PROJETO RH:
 
-![Diagrama de classes de uso](assets/imagem.jpg)
-![Fluxograma](assets/imagem2.jpg)
+![Diagrama de classes de uso](assets/imagem.png)
+![Fluxograma](assets/imagem2.png)
 ![Diagrama de classes](assets/logo.png)
 ![Cronograma](assets/cronograma.png)
 
