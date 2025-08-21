@@ -1,6 +1,11 @@
 # SA_Somativa_Auth
 DOCUMENTAÇÃO DO PROJETO RH:
 
+![Diagrama de classes de uso](assets/imagem.jpg)
+![Fluxograma](assets/imagem2.jpg)
+![Diagrama de classes](assets/logo.png)
+![Cronograma](assets/cronograma.png)
+
 1.ESCOPO: 
 1. Objetivo do Projeto RH
 O objetivo do projeto RH é desenvolver uma aplicação web de RH que permita um tipo de interação entre os usuários comuns e administradores. A plataforma criada oferecerá funcionalidades como cadastro e login de usuários, criação e visualização de currículos, bem como a gestão de vagas por parte do administrador do projeto.
@@ -154,4 +159,42 @@ o	Utilizado para armazenar dados temporários do usuário diretamente no navegad
 o	Banco de dados em nuvem ou simulado para armazenar dados persistentes como currículos, vagas e perfis de usuários.
 o	A comunicação entre o front-end (Angular) e o banco de dados é feita via API REST.
 
-4.CRONOGRAMA: 
+4.CRONOGRAMA:
+
+
+14/08/2025	Protótipos iniciais (baixa e média fidelidade)	
+Isabela Ramos
+
+14/08/2025	
+Protótipo de alta fidelidade	
+Enzo Paralupi
+
+14/08/2025	
+Início da documentação 	
+Kauã Santos
+
+21/08/2025	
+Diagrama de Classes	
+Kauan Sabino
+
+21/08/2025	
+Implementação de login e cadastro	
+Isabela Ramos
+
+21/08/2025	Finalização da documentação no readme	
+Kauã Santos
+
+21/08/2025	Implementações no código do projeto	
+Kauan Sabino
+
+21/08/2025	Implementação de outguards(rotas/autenticações) 	
+Isabela Ramos
+
+21/08/2025	
+Revisão geral e últimos testes	
+Todos integrantes
+
+21/08/2025	Gravação de demonstração final (5 min)	
+Todos integrantes
+
+
