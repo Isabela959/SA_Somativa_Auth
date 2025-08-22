@@ -1,60 +1,40 @@
-.container{
-  max-width: 1200px;
-  margin: 2rem auto;
+$cor-primaria: #002D62;
+$cor-fundo: #f4f4f4;
+$cor-texto: #ffffff;
+ 
+.container {
+  max-width: 50rem;
+  margin: 0 auto;
   padding: 2rem;
-  background-color: white;
+  background-color: $cor-fundo;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  align-items: center;
-
-  h1{
-    color: #333;
-    font-size: 2.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  text-align: center;
+ 
+  h1 {
+    color: $cor-primaria;
     margin-bottom: 1rem;
-    text-align: center;
-    line-height: 3rem;
-
-    @media (max-width: 780px){
-      font-size: 2rem;
-    }
-
-    @media (max-width: 480px){
-      font-size: 1.5rem;
-    }
   }
-
-  p{
-    color: #555;
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-top: 2rem;
-    text-align: center;
-
-    @media (max-width: 780px){
-      font-size: 1rem;
-    }
+ 
+  p {
+    color: $cor-primaria;
+    margin-bottom: 2rem;
   }
-
-    .button-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 30vh; }
-
-    .buttonLink {
+ 
+  .button-container {
+    a.buttonLink {
       display: inline-block;
-      padding: 36px 80px;
-      background-color: #365b77;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: $cor-primaria;
+      color: $cor-texto;
+      border-radius: 5px;
       font-weight: bold;
-      cursor: pointer;
+      text-decoration: none;
       transition: background-color 0.3s ease;
+ 
+      &:hover {
+        background-color: darken($cor-primaria, 10%);
+      }
     }
-
-    .buttonLink:hover {
-      background-color: #021d34; }
+  }
 }

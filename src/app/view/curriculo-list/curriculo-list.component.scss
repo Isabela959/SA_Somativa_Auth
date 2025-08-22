@@ -1,25 +1,51 @@
-.lista-curriculos{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 2rem 1rem;
-  max-width: 112rem;
-  gap: 2rem;
-  margin: 0 auto;
+$cor-primaria: #002D62;
+$cor-perigo: #dc3545;
+$cor-fundo: #f4f4f4;
+$cor-texto: #ffffff;
+ 
+.lista-curriculos {
   padding-bottom: 5rem;
-
-  .card {
-  margin: 5px 10px;
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3 ease;
-  width: 34rem;
-
-  &:hover {
-  transform: translateY(-5px); // quando colocar o mouse em cima, ele sobe 5 px
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);   }
+ 
+  .curriculo-item {
+    background-color: $cor-fundo;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: $cor-primaria;
+  }
 }
+ 
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+ 
+  button {
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: $cor-texto;
+ 
+    &.btn-listar {
+      background-color: $cor-primaria;
+ 
+      &:hover {
+        background-color: darken($cor-primaria, 10%);
+      }
+    }
+ 
+    &.btn-excluir {
+      background-color: $cor-perigo;
+ 
+      &:hover {
+        background-color: darken($cor-perigo, 10%);
+      }
+    }
+  }
 }
