@@ -19,36 +19,6 @@ DOCUMENTAÇÃO DO PROJETO RH:
 <em style="font-size:12px;">Kauã Santos</em></p>
 <img src="assets/cronograma.png" width="500"/>
 
-FIGMA: 
-
-<p><strong>PÁGINA DE REGISTRO:</strong><br>
-<em style="font-size:12px;"></em></p>
-<img src="assets/registro.jpg" width="500"/>
-
-<p><strong>PÁGINA DE LOGIN:</strong><br>
-<em style="font-size:12px;"></em></p>
-<img src="assets/login.jpg" width="500"/>
-
-<p><strong>PÁGINA INICIAL:</strong><br>
-<em style="font-size:12px;"></em></p>
-<img src="assets/inicial.jpg" width="500"/>
-
-<p><strong>PÁGINA DE VAGAS:</strong><br>
-<em style="font-size:12px;"></em></p>
-<img src="assets/paginadevagas.png" width="500"/>
-
-<p><strong>CRIAÇÃO DE CURRÍCULOS:</strong><br>
-<em style="font-size:12px;"></em></p>
-<img src="assets/curriculo.jpg" width="500"/>
-
-<p><strong>CRIAÇÃO DE VAGAS:</strong><br>
-<em style="font-size:12px;"></em></p>
-<img src="assets/criacaodevagas.png" width="500"/>
-
-<p><strong>ADMINISTRAÇÃO DE VAGAS:</strong><br>
-<em style="font-size:12px;"></em></p>
-<img src="assets/administracao.jpg" width="500"/>
-
 <small>
 
 1.ESCOPO:  
@@ -207,3 +177,33 @@ o	Banco de dados em nuvem ou simulado para armazenar dados persistentes como cur
 o	A comunicação entre o front-end (Angular) e o banco de dados é feita via API REST.  
 
 </small>
+
+FIGMA: 
+
+<p><strong>PÁGINA DE REGISTRO:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/registro.jpg" width="500"/>
+
+<p><strong>PÁGINA DE LOGIN:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/login.jpg" width="500"/>
+
+<p><strong>PÁGINA INICIAL:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/inicial.jpg" width="500"/>
+
+<p><strong>PÁGINA DE VAGAS:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/paginadevagas.png" width="500"/>
+
+<p><strong>CRIAÇÃO DE CURRÍCULOS:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/curriculo.jpg" width="500"/>
+
+<p><strong>CRIAÇÃO DE VAGAS:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/criacaodevagas.png" width="500"/>
+
+<p><strong>ADMINISTRAÇÃO DE VAGAS:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/administracao.jpg" width="500"/>
