@@ -21,9 +21,33 @@ DOCUMENTAÇÃO DO PROJETO RH:
 
 FIGMA: 
 
-<p><strong>:</strong><br>
-<em style="font-size:12px;">Isabela Ramos</em></p>
-<img src="assets/diagrama.png" width="500"/>
+<p><strong>PÁGINA DE REGISTRO:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/registro.jpg" width="500"/>
+
+<p><strong>PÁGINA DE LOGIN:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/login.jpg" width="500"/>
+
+<p><strong>PÁGINA INICIAL:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/inicial.jpg" width="500"/>
+
+<p><strong>PÁGINA DE VAGAS:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/paginadevagas.png" width="500"/>
+
+<p><strong>CRIAÇÃO DE CURRÍCULOS:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/curriculo.jpg" width="500"/>
+
+<p><strong>CRIAÇÃO DE VAGAS:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/criacaodevagas.png" width="500"/>
+
+<p><strong>ADMINISTRAÇÃO DE VAGAS:</strong><br>
+<em style="font-size:12px;"></em></p>
+<img src="assets/administracao.jpg" width="500"/>
 
 <small>
 
