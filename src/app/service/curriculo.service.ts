@@ -10,7 +10,7 @@ import { Curriculo } from '../models/curriculo.model';
 })
 export class CurriculoService {
   //atributo -> localhost
-  private apiUrl = "http://localhost:3011/curriculos"; // Caminho para arquivo Json
+  private apiUrl = "http://localhost:3012/curriculos"; // Caminho para arquivo Json
 
   constructor(private http: HttpClient) { }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Curriculo } from 'src/app/models/curriculo.model';
 import { CurriculoService } from 'src/app/service/curriculo.service';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-curriculo-list',
@@ -8,22 +9,26 @@ import { CurriculoService } from 'src/app/service/curriculo.service';
   styleUrls: ['./curriculo-list.component.scss']
 })
 export class CurriculoListComponent implements OnInit {
-  // Array onde serão armazenados os currículos recebidos do service
   public curriculos: Curriculo[] = [];
+  public usuarioEAdmin: boolean = false;
 
-  // Injeta o serviço de currículos no componente
-  constructor(private _curriculoService: CurriculoService) { }
+  constructor(
+    private _curriculoService: CurriculoService,
+    private authService: AuthService
+  ) { }
 
-  // Método chamado automaticamente quando o componente é carregado
   ngOnInit(): void {
-    this.listarCurriculos();
+    const usuarioAtual = this.authService.getUsuarioAtual();
+    this.usuarioEAdmin = usuarioAtual && usuarioAtual.tipo === 'admin'; // verifica se é admin
+
+    if (this.usuarioEAdmin) {
+      this.listarCurriculos();
+    }
   }
 
-  // Método que chama o serviço para obter todos os currículos do banco
   listarCurriculos() {
     this._curriculoService.getCurriculos().subscribe(
       (retornoCurriculo) => {
-        // Converte cada item recebido em um objeto Curriculo
         this.curriculos = retornoCurriculo.map(item => Curriculo.fromMap(item));
       }
     );

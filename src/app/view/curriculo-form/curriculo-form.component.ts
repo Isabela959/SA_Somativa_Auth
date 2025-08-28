@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Curriculo } from 'src/app/models/curriculo.model';
 import { CurriculoService } from 'src/app/service/curriculo.service';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-curriculo-form',
@@ -8,23 +9,26 @@ import { CurriculoService } from 'src/app/service/curriculo.service';
   styleUrls: ['./curriculo-form.component.scss']
 })
 export class CurriculoFormComponent implements OnInit {
-  // Objeto para armazenar os dados do formulário, inicializado vazio
-  public curriculo: Curriculo = new Curriculo(
-    0, '', '', '', '', '', '', '', '', ''
-  );
-
-  // Lista que armazenará os currículos
+  public curriculo: Curriculo = new Curriculo(0, '', '', '', '', '', '', '', '', '');
   public curriculos: Curriculo[] = [];
+  public usuarioEAdmin: boolean = false; // controle para exibir a lista
 
-  // Usa CurriculoService para comunicação com backend
-  constructor(private _curriculoService: CurriculoService) { }
+  constructor(
+    private _curriculoService: CurriculoService,
+    private authService: AuthService
+  ) {}
 
-  // Método que roda quando o componente é inicializado
   ngOnInit(): void {
-    this.listarCurriculos(); // Carrega a lista de currículos ao iniciar
+    // Verifica se o usuário logado é admin
+    const usuario = this.authService.getUsuarioAtual();
+    this.usuarioEAdmin = usuario?.role === 'admin'; // ajuste o campo conforme seu backend
+
+    // Só lista os currículos se for admin
+    if (this.usuarioEAdmin) {
+      this.listarCurriculos();
+    }
   }
 
-  // Busca todos os currículos via serviço e armazena na lista local
   listarCurriculos() {
     this._curriculoService.getCurriculos().subscribe(
       (retornoCurriculo) => {
@@ -33,13 +37,11 @@ export class CurriculoFormComponent implements OnInit {
     );
   }
 
-  // Carrega um currículo específico para edição
   listarCurriculoUnico(curriculo: Curriculo) {
     this.curriculo = curriculo;
   }
 
   cadastrar() {
-    // Verifica se todos os campos estão preenchidos
     if (
       !this.curriculo.nome ||
       !this.curriculo.email ||
@@ -55,17 +57,15 @@ export class CurriculoFormComponent implements OnInit {
       return;
     }
 
-    //Valida se o email terminal com @gmail.com
     if (!this.curriculo.email.endsWith("@gmail.com")) {
       alert("Email Inválido");
       return;
     }
 
-    // Se tudo passar pelas validações, ele cria o novo currículoacabei
     this._curriculoService.cadastrarCurriculo(this.curriculo).subscribe(
       () => {
         this.curriculo = new Curriculo(0, '', '', '', '', '', '', '', '', '');
-        this.listarCurriculos();
+        if (this.usuarioEAdmin) this.listarCurriculos();
         alert("Currículo Cadastrado com Sucesso!");
       },
       (err) => {
@@ -78,7 +78,7 @@ export class CurriculoFormComponent implements OnInit {
     this._curriculoService.atualizarCurriculo(id, this.curriculo).subscribe(
       () => {
         this.curriculo = new Curriculo(0, '', '', '', '', '', '', '', '', '');
-        this.listarCurriculos();
+        if (this.usuarioEAdmin) this.listarCurriculos();
       },
       (err) => {
         console.error('Erro ao atualizar currículo', err);
@@ -89,7 +89,7 @@ export class CurriculoFormComponent implements OnInit {
   excluir(id: number) {
     this._curriculoService.removerCurriculo(id).subscribe(
       () => {
-        this.listarCurriculos();
+        if (this.usuarioEAdmin) this.listarCurriculos();
       },
       (err) => {
         console.error('Erro ao excluir currículo', err);

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -6,8 +6,9 @@ import { AuthService } from 'src/app/service/auth.service';
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss']
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit {
 
   constructor(public authService: AuthService) {}
 
+  ngOnInit(): void {}
 }

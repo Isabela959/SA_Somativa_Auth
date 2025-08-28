@@ -2,28 +2,97 @@ $cor-primaria: #002D62;
 $cor-perigo: #dc3545;
 $cor-fundo: #f4f4f4;
 $cor-texto: #ffffff;
- 
-.lista-vagas {
-  padding-bottom: 5rem;
- 
-  .vaga-item {
-    background-color: $cor-fundo;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+/* Formulário de cadastro de vagas */
+.vagas-form {
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
     color: $cor-primaria;
   }
+
+  form {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    background-color: $cor-fundo;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $cor-primaria;
+      font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      margin-bottom: 1.5rem;
+      border: 1.5px solid $cor-primaria;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: $cor-primaria;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $cor-primaria;
+        box-shadow: 0 0 5px rgba(0, 45, 98, 0.5);
+      }
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .buttons-container button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      color: $cor-texto;
+
+      &:nth-of-type(1) {
+        background-color: $cor-primaria;
+        &:hover {
+          background-color: darken($cor-primaria, 10%);
+        }
+      }
+
+      &:nth-of-type(2) {
+        background-color: #007bff; // Atualizar Vaga
+        &:hover {
+          background-color: darken(#007bff, 10%);
+        }
+      }
+
+      &:nth-of-type(3) {
+        background-color: $cor-perigo;
+        &:hover {
+          background-color: darken($cor-perigo, 10%);
+        }
+      }
+    }
+  }
 }
- 
-.actions-container {
+
+/* Botões da tabela de vagas (igual lista-curriculos) */
+.lista-vagas .actions-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
- 
+
   button {
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
@@ -31,21 +100,39 @@ $cor-texto: #ffffff;
     font-size: 0.9rem;
     cursor: pointer;
     color: $cor-texto;
- 
+
     &.btn-listar {
       background-color: $cor-primaria;
- 
       &:hover {
         background-color: darken($cor-primaria, 10%);
       }
     }
- 
+
     &.btn-excluir {
       background-color: $cor-perigo;
- 
       &:hover {
         background-color: darken($cor-perigo, 10%);
       }
     }
+  }
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .vagas-form form {
+    padding: 1rem;
+
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+    }
+
+    .buttons-container {
+      flex-direction: column;
+    }
+  }
+
+  .lista-vagas .actions-container {
+    flex-direction: column;
   }
 }
