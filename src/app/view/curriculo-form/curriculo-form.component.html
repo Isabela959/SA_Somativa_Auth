@@ -1,37 +1,51 @@
 <!-- Seção do formulário para cadastro, atualização e exclusão de currículos -->
-
 <section class="curriculo-form">
   <h2>Cadastro de Currículo</h2>
 
   <form>
-    <label>Nome</label><input type="text" name="nome" [(ngModel)]="curriculo.nome"><br>
-    <label>Email</label><input type="text" name="email" [(ngModel)]="curriculo.email"><br>
-    <label>Telefone</label><input type="text" name="telefone" [(ngModel)]="curriculo.telefone"><br>
-    <label>Endereço</label><input type="text" name="endereco" [(ngModel)]="curriculo.endereco"><br>
-    <label>Resumo Profissional</label><textarea name="resumo" [(ngModel)]="curriculo.resumo"></textarea>
-    <label>Experiência</label><textarea name="experiencia" [(ngModel)]="curriculo.experiencia"></textarea>
-    <label>Formação</label><textarea name="formacao" [(ngModel)]="curriculo.formacao"></textarea>
-    <label>Idioma</label><input type="text" name="idioma" [(ngModel)]="curriculo.idioma"><br>
-    <label>Habilidades</label><input type="text" name="habilidades" [(ngModel)]="curriculo.habilidades"><br>
+    <label>Nome</label>
+    <input type="text" name="nome" [(ngModel)]="curriculo.nome"><br>
 
+    <label>Email</label>
+    <input type="text" name="email" [(ngModel)]="curriculo.email"><br>
+
+    <label>Telefone</label>
+    <input type="text" name="telefone" [(ngModel)]="curriculo.telefone"><br>
+
+    <label>Endereço</label>
+    <input type="text" name="endereco" [(ngModel)]="curriculo.endereco"><br>
+
+    <label>Resumo Profissional</label>
+    <textarea name="resumo" [(ngModel)]="curriculo.resumo"></textarea>
+
+    <label>Experiência</label>
+    <textarea name="experiencia" [(ngModel)]="curriculo.experiencia"></textarea>
+
+    <label>Formação</label>
+    <textarea name="formacao" [(ngModel)]="curriculo.formacao"></textarea>
+
+    <label>Idioma</label>
+    <input type="text" name="idioma" [(ngModel)]="curriculo.idioma"><br>
+
+    <label>Habilidades</label>
+    <input type="text" name="habilidades" [(ngModel)]="curriculo.habilidades"><br>
 
     <div class="buttons-container">
-      <!-- Botão para cadastrar um novo currículo -->
       <button type="button" (click)="cadastrar()">Cadastrar Currículo</button>
-      <!-- Botão para atualizar e excluir o currículo passando o id -->
       <button type="button" (click)="atualizar(curriculo.id)">Atualizar Currículo</button>
       <button type="button" (click)="excluir(curriculo.id)">Excluir Currículo</button>
     </div>
-
   </form>
-</section><br><br>
+</section>
+
+<br><br>
 
 <!-- Seção que exibe a lista de currículos cadastrados em uma tabela -->
-<section class="lista-curriculos">
+<!-- Só aparece se for admin -->
+<section class="lista-curriculos" *ngIf="usuarioEAdmin">
   <table class="table">
     <thead>
       <tr>
-        <!-- Cabeçalho da tabela com os nomes dos campos do currículo -->
         <th>Código</th>
         <th>Nome</th>
         <th>Email</th>
@@ -46,9 +60,7 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Laço para exibir cada currículo da lista 'curriculos' -->
       <tr *ngFor="let curriculo of curriculos" class="curriculo-row">
-        <!-- Mostra os dados do currículo nas colunas correspondentes -->
         <td>{{ curriculo.id }}</td>
         <td>{{ curriculo.nome }}</td>
         <td>{{ curriculo.email }}</td>
@@ -61,14 +73,12 @@
         <td>{{ curriculo.habilidades }}</td>
         <td>
           <div class="actions-container">
-          <!-- Botão para carregar o currículo selecionado no formulário para edição -->
-          <button type="button" (click)="listarCurriculoUnico(curriculo)" class="btn-listar">
-            Listar
-          </button>
-          <!-- Botão para excluir o currículo selecionado -->
-          <button type="button" (click)="excluir(curriculo.id)" class="btn-excluir">
-            Excluir
-          </button>
+            <button type="button" (click)="listarCurriculoUnico(curriculo)" class="btn-listar">
+              Listar
+            </button>
+            <button type="button" (click)="excluir(curriculo.id)" class="btn-excluir">
+              Excluir
+            </button>
           </div>
         </td>
       </tr>

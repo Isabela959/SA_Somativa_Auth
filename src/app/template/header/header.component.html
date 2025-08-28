@@ -1,11 +1,19 @@
 <nav class="navbar">
-  <a href="/">RH Connect</a>
+  <a routerLink="/">RH Connect</a>
   <div class="navItens">
-    <a href="/curriculos" class="navLink">Currículos</a>
-    <a href="/vagas" class="navLink">Vagas</a>
+    <!-- Usuário ADM vê link para Currículos -->
+    <a *ngIf="authService.estaAutenticado() && authService.getUsuarioAtual()?.tipo === 'admin'" 
+       routerLink="/curriculos" class="navLink">
+       Currículos
+    </a>
+
+    <!-- Todos os usuários logados podem ver Vagas -->
+    <a *ngIf="authService.estaAutenticado()" routerLink="/vagas" class="navLink">
+      Vagas
+    </a>
 
     <!-- Login / Logout -->
-    <a routerLink="/login" class="navLink" *ngIf="!authService.estaAutenticado()">Login</a>
-    <a class="navLink" *ngIf="authService.estaAutenticado()" (click)="logout()">Logout</a>
+    <a *ngIf="!authService.estaAutenticado()" routerLink="/login" class="navLink">Login</a>
+    <a *ngIf="authService.estaAutenticado()" class="navLink" (click)="logout()">Logout</a>
   </div>
 </nav>

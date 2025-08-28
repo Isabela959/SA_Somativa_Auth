@@ -1,4 +1,4 @@
-<section class="lista-curriculos">
+<section class="lista-curriculos" *ngIf="usuarioEAdmin">
   <!-- Início de um loop ngFor que percorre cada objeto 'vaga' na matriz
 'vagas' properties do databind -->
   <div *ngFor="let curriculo of curriculos">
